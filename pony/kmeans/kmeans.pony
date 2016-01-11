@@ -17,7 +17,7 @@ class Kmeans
 
   fun closest(x: Point, choices: Array[Point]): Point =>
     var tmp = Point(0, 0)
-    var min: F64 = U32.max_value().f64()
+    var min = F64.max_value()
     for p in choices.values() do
       let tmp_dist = dist(p, x)
       if tmp_dist < min then
